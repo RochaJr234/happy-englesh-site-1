@@ -35,10 +35,12 @@
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
+    .section {
+      margin-bottom: 40px;
+    }
     .welcome {
       text-align: center;
       font-size: 1.2em;
-      margin-bottom: 30px;
       color: #00247d;
     }
     .gallery {
@@ -85,7 +87,6 @@
     }
     .british-style {
       text-align: center;
-      margin-top: 40px;
     }
     .british-style img {
       width: 150px;
@@ -93,7 +94,6 @@
     }
     .whatsapp {
       text-align: center;
-      margin-top: 40px;
     }
     .whatsapp a {
       background-color: #25d366;
@@ -106,6 +106,36 @@
     .whatsapp a:hover {
       background-color: #128c7e;
     }
+    form {
+      background: #eef3fc;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      margin-top: 20px;
+      background-color: #00247d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #001d5e;
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -113,6 +143,13 @@
       color: #666;
     }
   </style>
+  <script>
+    function confirmarCadastro(event) {
+      event.preventDefault();
+      alert("Cadastro enviado com sucesso! Em breve você receberá o e-book por e-mail.");
+      event.target.reset();
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -120,17 +157,17 @@
     <p>Organização: Teacher Juliana Flávia</p>
   </header>
   <main>
-    <div class="welcome">
+    <section class="section welcome">
       <p>Explore lindos e-books bíblicos em inglês para crianças. Aprender inglês nunca foi tão divertido!</p>
-    </div>
+    </section>
 
-    <div class="gallery">
+    <section class="section gallery">
       <div class="ebook">
         <img src="https://images.unsplash.com/photo-1603575448362-f728f1f72c80?fit=crop&w=400&q=80" alt="Livro Infantil 1">
         <div class="ebook-content">
           <h3>"Jesus Loves Me" - Vol. 1</h3>
           <p>Histórias bíblicas com atividades educativas em inglês.</p>
-          <a class="buy-btn" href="https://pagamentodoseuebook.com/exemplo1" target="_blank">Comprar - R$19,90</a>
+          <a class="buy-btn" href="https://mpago.la/2kCkfyN" target="_blank">Comprar - R$19,90</a>
         </div>
       </div>
       <div class="ebook">
@@ -138,21 +175,53 @@
         <div class="ebook-content">
           <h3>"Bible Heroes for Kids" - Vol. 2</h3>
           <p>Conheça os heróis da Bíblia em inglês com jogos e atividades.</p>
-          <a class="buy-btn" href="https://pagamentodoseuebook.com/exemplo2" target="_blank">Comprar - R$24,90</a>
+          <a class="buy-btn" href="https://mpago.la/2kCkfyN" target="_blank">Comprar - R$24,90</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="british-style">
+    <section class="section british-style">
       <h3>Estilo Britânico</h3>
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Red_telephone_box_London.jpg" alt="Cabine Telefônica de Londres"/>
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/London_Double-decker_Bus.jpg" alt="Ônibus de Londres"/>
-    </div>
+    </section>
 
-    <div class="whatsapp">
+    <section class="section whatsapp">
       <p>Dúvidas? Fale com a Teacher Juliana no WhatsApp!</p>
-      <a href="https://wa.me/SEUNUMERO" target="_blank">Falar agora</a>
-    </div>
+      <a href="https://wa.me/5599999999999" target="_blank">Falar agora</a>
+    </section>
+
+    <section class="section">
+      <h2>Cadastro</h2>
+      <form onsubmit="confirmarCadastro(event)">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="filho">Nome do(a) filho(a)</label>
+        <input type="text" id="filho" name="filho" required />
+
+        <label for="idade">Idade da criança</label>
+        <input type="number" id="idade" name="idade" required min="1" max="12" />
+
+        <label for="ebook">E-book escolhido</label>
+        <select id="ebook" name="ebook">
+          <option value="Jesus Loves Me">Jesus Loves Me - Vol. 1</option>
+          <option value="Bible Heroes">Bible Heroes for Kids - Vol. 2</option>
+        </select>
+
+        <label>Confirma que os dados estão corretos?</label>
+        <select required>
+          <option value="">Selecione</option>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
+
+        <button type="submit">Enviar Cadastro</button>
+      </form>
+    </section>
   </main>
   <footer>
     © 2025 Happy English - Todos os direitos reservados.
