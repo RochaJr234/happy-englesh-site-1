@@ -2,73 +2,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy English - Teacher Juliana Flávia</title>
   <style>
     body {
-      font-family: "Comic Sans MS", cursive, sans-serif;
-      background: #e0f7fa;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background: #f5f9ff;
       margin: 0;
       padding: 0;
+      color: #333;
     }
     header {
-      background: #4dd0e1;
-      padding: 20px;
-      text-align: center;
+      background: #00247d;
       color: white;
+      padding: 30px 20px;
+      text-align: center;
     }
     header h1 {
       font-size: 2.5em;
       margin: 0;
     }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 30px auto;
       padding: 20px;
-      background: #ffffff;
+      background: white;
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
     .welcome {
       text-align: center;
-      font-size: 1.3em;
+      font-size: 1.2em;
       margin-bottom: 30px;
-      color: #00796b;
+      color: #00247d;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
     .ebook {
-      display: flex;
-      align-items: center;
-      border: 1px solid #b2ebf2;
+      width: 280px;
+      border: 1px solid #ddd;
       border-radius: 10px;
-      margin-bottom: 20px;
-      padding: 15px;
+      overflow: hidden;
+      background: #f0f4ff;
     }
     .ebook img {
-      width: 120px;
+      width: 100%;
       height: auto;
-      border-radius: 8px;
-      margin-right: 20px;
+    }
+    .ebook-content {
+      padding: 15px;
     }
     .ebook h3 {
-      margin: 0 0 10px;
-      color: #00796b;
+      margin-top: 0;
+      color: #c8102e;
     }
     .ebook p {
-      margin: 0;
+      margin: 10px 0;
     }
     .buy-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #4caf50;
+      display: block;
+      text-align: center;
+      margin: 15px auto 0;
+      padding: 10px;
+      background-color: #c8102e;
       color: white;
-      text-decoration: none;
+      border: none;
       border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
     .buy-btn:hover {
-      background: #388e3c;
+      background-color: #a00f25;
+    }
+    .british-style {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .british-style img {
+      width: 150px;
+      margin: 10px;
     }
     .whatsapp {
       text-align: center;
@@ -89,7 +110,7 @@
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #777;
+      color: #666;
     }
   </style>
 </head>
@@ -100,34 +121,41 @@
   </header>
   <main>
     <div class="welcome">
-      <p>Bem-vindo ao Happy English! Escolha um dos nossos e-books infantis bíblicos em inglês e incentive o aprendizado do seu filho(a) com histórias lindas e educativas!</p>
+      <p>Explore lindos e-books bíblicos em inglês para crianças. Aprender inglês nunca foi tão divertido!</p>
     </div>
 
-    <div class="ebook">
-      <img src="https://via.placeholder.com/120x160?text=E-book+1" alt="Ebook 1">
-      <div>
-        <h3>"Jesus Loves Me" - Volume 1</h3>
-        <p>Histórias bíblicas com atividades divertidas em inglês para crianças.</p>
-        <a href="https://pagamentodoseuebook.com/exemplo1" class="buy-btn" target="_blank">Comprar - R$19,90</a>
+    <div class="gallery">
+      <div class="ebook">
+        <img src="https://images.unsplash.com/photo-1603575448362-f728f1f72c80?fit=crop&w=400&q=80" alt="Livro Infantil 1">
+        <div class="ebook-content">
+          <h3>"Jesus Loves Me" - Vol. 1</h3>
+          <p>Histórias bíblicas com atividades educativas em inglês.</p>
+          <a class="buy-btn" href="https://pagamentodoseuebook.com/exemplo1" target="_blank">Comprar - R$19,90</a>
+        </div>
+      </div>
+      <div class="ebook">
+        <img src="https://images.unsplash.com/photo-1589820296156-2454bb8cebbb?fit=crop&w=400&q=80" alt="Livro Infantil 2">
+        <div class="ebook-content">
+          <h3>"Bible Heroes for Kids" - Vol. 2</h3>
+          <p>Conheça os heróis da Bíblia em inglês com jogos e atividades.</p>
+          <a class="buy-btn" href="https://pagamentodoseuebook.com/exemplo2" target="_blank">Comprar - R$24,90</a>
+        </div>
       </div>
     </div>
 
-    <div class="ebook">
-      <img src="https://via.placeholder.com/120x160?text=E-book+2" alt="Ebook 2">
-      <div>
-        <h3>"Bible Heroes for Kids" - Volume 2</h3>
-        <p>Aprenda sobre os heróis da Bíblia com atividades em inglês.</p>
-        <a href="https://pagamentodoseuebook.com/exemplo2" class="buy-btn" target="_blank">Comprar - R$24,90</a>
-      </div>
+    <div class="british-style">
+      <h3>Estilo Britânico</h3>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Red_telephone_box_London.jpg" alt="Cabine Telefônica de Londres"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/London_Double-decker_Bus.jpg" alt="Ônibus de Londres"/>
     </div>
 
     <div class="whatsapp">
-      <p>Tem dúvidas? Fale conosco pelo WhatsApp!</p>
-      <a href="https://wa.me/SEUNUMERO" target="_blank">Falar com a Teacher Juliana</a>
+      <p>Dúvidas? Fale com a Teacher Juliana no WhatsApp!</p>
+      <a href="https://wa.me/SEUNUMERO" target="_blank">Falar agora</a>
     </div>
   </main>
   <footer>
-    © 2025 Happy English - Teacher Juliana Flávia. Todos os direitos reservados.
+    © 2025 Happy English - Todos os direitos reservados.
   </footer>
 </body>
 </html>
